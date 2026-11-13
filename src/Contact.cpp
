@@ -1,0 +1,22 @@
+#include "Contact.h"
+#include <iostream>
+
+Contact::Contact() : name(""), phoneNumber(""), email("") {}
+
+Contact::Contact(std::string name, std::string phone, std::string email) 
+    : name(name), phoneNumber(phone), email(email) {}
+
+std::string Contact::getName() const { return name; }
+std::string Contact::getPhoneNumber() const { return phoneNumber; }
+std::string Contact::getEmail() const { return email; }
+
+void Contact::setName(const std::string& n) { name = n; }
+void Contact::setPhoneNumber(const std::string& p) { phoneNumber = p; }
+void Contact::setEmail(const std::string& e) { email = e; }
+
+void Contact::displayContact() const {
+    std::cout << "Name: " << name << "\n";
+    std::cout << "Phone: " << phoneNumber << "\n";
+    std::cout << "Email: " << email << "\n";
+    std::cout << "-------------------------\n";
+}
