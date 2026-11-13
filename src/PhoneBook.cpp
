@@ -1,0 +1,38 @@
+#include "PhoneBook.h"
+#include <iostream>
+
+void PhoneBook::addContact() {
+    std::string name, phone, email;
+    std::cout << "Enter Name: ";
+    std::cin.ignore();
+    std::getline(std::cin, name);
+    std::cout << "Enter Phone Number: ";
+    std::getline(std::cin, phone);
+    std::cout << "Enter Email: ";
+    std::getline(std::cin, email);
+
+    contacts.emplace_back(name, phone, email);
+    std::cout << "✅ Contact added successfully!\n";
+}
+
+void PhoneBook::displayAllContacts() const {
+    if (contacts.empty()) {
+        std::cout << "📭 Phonebook is empty.\n";
+        return;
+    }
+    std::cout << "\n--- Contact List ---\n";
+    for (size_t i = 0; i < contacts.size(); ++i) {
+        std::cout << "[" << i + 1 << "]\n";
+        contacts[i].displayContact();
+    }
+}
+
+void PhoneBook::searchContact() const {
+    // Placeholder for search logic
+    std::cout << "Search feature coming soon!\n";
+}
+
+void PhoneBook::deleteContact() {
+    // Placeholder for delete logic
+    std::cout << "Delete feature coming soon!\n";
+}
