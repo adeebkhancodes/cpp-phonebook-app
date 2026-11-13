@@ -16,18 +16,3 @@ A feature-rich, modular command-line Phonebook Application built in C++. Designe
 
 * Modular Architecture:Clean separation of header files (`include/`) and source files (`src/`).
 
----
-
-🛠️ Project Structure
-
-cpp-phonebook-app/
-├── include/
-│   ├── Contact.h       # Contact class declaration
-│   └── PhoneBook.h     # PhoneBook management class declaration
-├── src/
-│   ├── Contact.cpp     # Contact class methods
-│   ├── PhoneBook.cpp   # PhoneBook logic & file I/O implementation
-│   └── main.cpp        # Interactive CLI menu & entry point
-├── .gitignore          # Excludes binaries and build artifacts
-├── LICENSE             # MIT Open Source License
-└── README.md           # Project documentation
